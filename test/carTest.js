@@ -41,40 +41,52 @@ describe("#shouldBuyCar()", function() { // 3
     }
   );
 
-  it("should return true when the car has 6 litres/100km and is under or equal to $5,000"/* ,
+  it("should return true when the car has 6 litres/100km and is under or equal to $5,000",
     function() {
-    
-    } */
+      const car = { litresPer100km: 6, price: 5000};
+      const decision = shouldBuyCar(car);
+      assert.isTrue(decision);
+    }
   );
   
-  it("should return true when the car has 11 litres/100km and is under or equal to $5,000"/* ,
+  it("should return true when the car has 11 litres/100km and is under or equal to $5,000",
     function() {
-
-    } */
+      const car = { litresPer100km: 11, price: 5000};
+      const decision = shouldBuyCar(car);
+      assert.isTrue(decision);
+    }
   );
   
-  it("should return false when the car has 6 litres/100km and is over $5,000"/* ,
+  it("should return false when the car has 6 litres/100km and is over $5,000",
     function() {
-    
-    } */
+      const car = { litresPer100km: 6, price: 5001};
+      const decision = shouldBuyCar(car);
+      assert.isFalse(decision);
+    }
   );
   
-  it("should return false when the car has 11 litres/100km and is over $5,000"/* ,
+  it("should return false when the car has 11 litres/100km and is over $5,000",
     function() {
-
-    } */
+      const car = { litresPer100km: 11, price: 5001};
+      const decision = shouldBuyCar(car);
+      assert.isFalse(decision);
+    }
   );
   
-  it("should return false when the car has 5 litres/100km and is under or equal to $5,000"/* ,
+  it("should return false when the car has 5 litres/100km and is under or equal to $5,000",
     function() {
-    
-    } */
+      const car = { litresPer100km: 5, price: 5000};
+      const decision = shouldBuyCar(car);
+      assert.isFalse(decision);
+    }
   );
   
-  it("should return false when the car has 12 litres/100km and is under or equal to $5,000"/* ,
+  it("should return false when the car has 12 litres/100km and is under or equal to $5,000",
     function() {
-    
-    } */
+      const car = { litresPer100km: 12, price: 5000};
+      const decision = shouldBuyCar(car);
+      assert.isFalse(decision);
+    }
   );
   
   it("should return undefined when there is no car"/* ,
@@ -82,10 +94,5 @@ describe("#shouldBuyCar()", function() { // 3
     
     } */
   );
-
-
-
-
-
 
 });
