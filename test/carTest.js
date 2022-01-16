@@ -33,10 +33,12 @@ describe("#shouldBuyCar()", function() { // 3
     }
   );
   
-  it("should return false when the car is a hatchback and pink"/* ,
+  it("should return false when the car is a hatchback and pink",
     function() {
-
-    } */
+      const car = { type: 'hatchback', color: 'pink'};
+      const decision = shouldBuyCar(car);
+      assert.isFalse(decision);
+    }
   );
 
   it("should return true when the car has 6 litres/100km and is under or equal to $5,000"/* ,
