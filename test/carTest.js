@@ -1,5 +1,3 @@
-// eslint-disable-next-line no-unused-vars
-const { should } = require('chai');
 const chai = require('chai'); // 1
 const assert = chai.assert;
 
@@ -89,10 +87,11 @@ describe("#shouldBuyCar()", function() { // 3
     }
   );
   
-  it("should return undefined when there is no car"/* ,
+  it("should return undefined when there is no car",
     function() {
-    
-    } */
+      const decision = shouldBuyCar();
+      assert.isUndefined(decision);
+    }
   );
 
 });
