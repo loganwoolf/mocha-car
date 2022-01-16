@@ -10,17 +10,16 @@ describe("#shouldBuyCar()", function() { // 3
   it("should return true when the car is pink",
     function() {
       const car = { color: 'pink' };
-
       const decision = shouldBuyCar(car);
-
       assert.isTrue(decision);
-
     }
   );
   
   it('should return false when there are no details about the car',
     function() {
-
+      const car = {};
+      const decision = shouldBuyCar(car);
+      assert.isFalse(decision);
     }
   );
   
